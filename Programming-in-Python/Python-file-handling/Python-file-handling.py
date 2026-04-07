@@ -1,7 +1,7 @@
-file = open('test.txt', mode = 'r')
+try:
+    with open('text.txt', mode = 'r') as file:
+        data = file.readlines()
 
-data = file.readlines()
-
-print(data)
-
-file.close()
+        print(data)
+except FileNotFoundError as e:
+    print(f"The file is not found. Type of error:{e}")
