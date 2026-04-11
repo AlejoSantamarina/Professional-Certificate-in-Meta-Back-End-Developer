@@ -7,7 +7,9 @@ try:
 except FileNotFoundError as e:
     print(f"The file is not found. Type of error:{e}")
 
-#file creation
+#write-only to the file, replacing it each time
 
-with open('newfile.txt', 'w') as file:
+with open('newfile.txt', 'a') as file:
     file.write("This is a new file created.")
+
+#write only to the file, without replacing it each time
