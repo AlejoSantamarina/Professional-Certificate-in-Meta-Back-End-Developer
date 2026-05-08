@@ -9,7 +9,20 @@ except FileNotFoundError as e:
 
 #write-only to the file, replacing it each time
 
-with open('newfile.txt', 'a') as file:
+with open('newfile.txt', 'w') as file:
     file.write("This is a new file created.")
 
 #write only to the file, without replacing it each time
+
+with open('newfile.txt', 'a') as file:
+    file.write("This is a new file created.")
+
+#types of reading
+
+with open('Programming-in-Python/Python-file-handling/test.txt', 'r') as file:
+    print(file.read(10))
+    print(file.read())
+
+    file.seek(0)
+    print(file.readline())
+    print(file.readlines())
